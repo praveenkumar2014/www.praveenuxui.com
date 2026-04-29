@@ -88,7 +88,7 @@
   function initScrollReveal() {
     var targets = document.querySelectorAll(
       '.card, .expertise-item, .services-item, .work-experiance-main li, ' +
-      '.project-item, .stat-item, .accordion-item'
+      '.project-item, .stat-item, .accordion-item, .skill-category, .skill-card'
     );
 
     targets.forEach(function (el, i) {
