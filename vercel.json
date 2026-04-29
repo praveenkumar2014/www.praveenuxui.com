@@ -3,6 +3,11 @@
   "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/**/*.php": { "runtime": "vercel-php@0.7.1" },
+    "*.php": { "runtime": "vercel-php@0.7.1" },
+    "assets/*.php": { "runtime": "vercel-php@0.7.1" }
+  },
   "headers": [
     {
       "source": "/(.*)",
@@ -21,19 +26,24 @@
     }
   ],
   "rewrites": [
-    { "source": "/",                  "destination": "/index.html" },
-    { "source": "/about",             "destination": "/about.html" },
-    { "source": "/services",          "destination": "/services.html" },
-    { "source": "/skills",            "destination": "/skills.html" },
-    { "source": "/portfolio",         "destination": "/portfolio.html" },
-    { "source": "/contact",           "destination": "/contact.html" },
-    { "source": "/blog",              "destination": "/blog.html" },
-    { "source": "/article",           "destination": "/article.html" },
-    { "source": "/gpay",              "destination": "/gpay.html" },
-    { "source": "/gmobile",           "destination": "/gmobile.html" },
-    { "source": "/gtresearch",        "destination": "/gtresearch.html" },
-    { "source": "/kd",                "destination": "/kd.html" },
-    { "source": "/portfolio-details", "destination": "/portfolio-details.html" },
-    { "source": "/thank-you",         "destination": "/thank-you.html" }
+    { "source": "/index",             "destination": "/index.php" },
+    { "source": "/about",             "destination": "/about.php" },
+    { "source": "/services",          "destination": "/services.php" },
+    { "source": "/skills",            "destination": "/skills.php" },
+    { "source": "/portfolio",         "destination": "/portfolio.php" },
+    { "source": "/contact",           "destination": "/contact.php" },
+    { "source": "/blog",              "destination": "/blog.php" },
+    { "source": "/article",           "destination": "/article.php" },
+    { "source": "/gpay",              "destination": "/gpay.php" },
+    { "source": "/gmobile",           "destination": "/gmobile.php" },
+    { "source": "/gtresearch",        "destination": "/gtresearch.php" },
+    { "source": "/kd",                "destination": "/kd.php" },
+    { "source": "/portfolio-details", "destination": "/portfolio-details.php" },
+    { "source": "/thank-you",         "destination": "/thank-you.php" },
+    { "source": "/admin",             "destination": "/admin.php" },
+    { "source": "/login",             "destination": "/login.php" },
+    { "source": "/terms",             "destination": "/terms.php" },
+    { "source": "/privacy",           "destination": "/privacy.php" }
   ]
 }
+
