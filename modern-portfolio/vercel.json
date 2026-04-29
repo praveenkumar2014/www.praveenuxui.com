@@ -4,8 +4,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "functions": {
-    "*.php": { "runtime": "vercel-php@0.7.1" },
-    "assets/*.php": { "runtime": "vercel-php@0.7.1" }
+    "api/**/*.php": { "runtime": "vercel-php@0.7.1" }
   },
   "headers": [
     {
@@ -25,26 +24,10 @@
     }
   ],
   "rewrites": [
-    { "source": "/index",             "destination": "/index.php" },
-    { "source": "/about",             "destination": "/about.php" },
-    { "source": "/services",          "destination": "/services.php" },
-    { "source": "/skills",            "destination": "/skills.php" },
-    { "source": "/portfolio",         "destination": "/portfolio.php" },
-    { "source": "/contact",           "destination": "/contact.php" },
-    { "source": "/blog",              "destination": "/blog.php" },
-    { "source": "/article",           "destination": "/article.php" },
-    { "source": "/gpay",              "destination": "/gpay.php" },
-    { "source": "/gmobile",           "destination": "/gmobile.php" },
-    { "source": "/gtresearch",        "destination": "/gtresearch.php" },
-    { "source": "/kd",                "destination": "/kd.php" },
-    { "source": "/portfolio-details", "destination": "/portfolio-details.php" },
-    { "source": "/thank-you",         "destination": "/thank-you.php" },
-    { "source": "/admin",             "destination": "/admin/index.php" },
-    { "source": "/admin/(.*)",        "destination": "/admin/$1.php" },
-    { "source": "/login",             "destination": "/admin/index.php" },
-    { "source": "/logout",            "destination": "/admin/logout.php" },
-    { "source": "/terms",             "destination": "/terms.php" },
-    { "source": "/privacy",           "destination": "/privacy.php" }
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/css/(.*)", "destination": "/css/$1" },
+    { "source": "/js/(.*)", "destination": "/js/$1" },
+    { "source": "/(.*)", "destination": "/api/index.php" }
   ]
 }
 
