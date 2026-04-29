@@ -1,16 +1,25 @@
 {
   "version": 2,
+  "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/blog", "dest": "/blog.html" },
-    { "src": "/contact", "dest": "/contact.html" },
-    { "src": "/portfolio", "dest": "/portfolio.html" },
-    { "src": "/portfolio-details", "dest": "/portfolio-details.html" },
-    { "src": "/services", "dest": "/services.html" },
-    { "src": "/article", "dest": "/article.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/portfolio-details", "destination": "/portfolio-details.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/article", "destination": "/article.html" }
   ]
 }
