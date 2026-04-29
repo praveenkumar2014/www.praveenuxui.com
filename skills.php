@@ -48,18 +48,18 @@
 <div class="skill-category reveal-up">
     <h2 class="main-common-title skill-cat-title">🎨 Design & Creative Ecosystem</h2>
     <div class="row g-3 skills-grid">
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/figma.svg" alt="Figma"></div><span>Figma</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/framer.svg" alt="Framer"></div><span>Framer</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/webflow.svg" alt="Webflow"></div><span>Webflow</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/notion.svg" alt="Notion"></div><span>Notion</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/adobe-photoshop.svg" alt="Photoshop"></div><span>Photoshop</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/adobe-illustrator.svg" alt="Illustrator"></div><span>Illustrator</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/adobe-indesign.svg" alt="InDesign"></div><span>InDesign</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/adobe-xd.svg" alt="Adobe XD"></div><span>Adobe XD</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/sketch.svg" alt="Sketch"></div><span>Sketch</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/storybook.svg" alt="Storybook"></div><span>Storybook</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/canva.svg" alt="Canva"></div><span>Canva</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/miro.svg" alt="Miro"></div><span>Miro</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/figma.svg" alt="Figma"></div><span>Figma</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/framer.svg" alt="Framer"></div><span>Framer</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/webflow.svg" alt="Webflow"></div><span>Webflow</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/notion.svg" alt="Notion"></div><span>Notion</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/photoshop.svg" alt="Photoshop"></div><span>Photoshop</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/illustrator.svg" alt="Illustrator"></div><span>Illustrator</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/adobe-indesign.svg" alt="InDesign"></div><span>InDesign</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/adobe-xd.svg" alt="Adobe XD"></div><span>Adobe XD</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/sketch.svg" alt="Sketch"></div><span>Sketch</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/storybook.svg" alt="Storybook"></div><span>Storybook</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/canva.svg" alt="Canva"></div><span>Canva</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/miro.svg" alt="Miro"></div><span>Miro</span></div></div>
     </div>
 </div>
 
@@ -67,17 +67,17 @@
 <div class="skill-category reveal-up">
     <h2 class="main-common-title skill-cat-title">✦ AI Agentic & GenAI Stack</h2>
     <div class="row g-3 skills-grid">
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/openai.svg" alt="OpenAI"></div><span>OpenAI</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/claude-ai.svg" alt="Claude AI"></div><span>Claude AI</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/gemini.svg" alt="Gemini"></div><span>Gemini</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/langchain.svg" alt="LangChain"></div><span>LangChain</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/hugging-face.svg" alt="HuggingFace"></div><span>HuggingFace</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/mistral.svg" alt="Mistral"></div><span>Mistral</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/perplexity.svg" alt="Perplexity"></div><span>Perplexity</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/pinecone.svg" alt="Pinecone"></div><span>Pinecone</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/cursor.svg" alt="Cursor"></div><span>Cursor IDE</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/ollama.svg" alt="Ollama"></div><span>Ollama</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/llamaindex.svg" alt="LlamaIndex"></div><span>LlamaIndex</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/openai.svg" alt="OpenAI"></div><span>OpenAI</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/claude-ai.svg" alt="Claude AI"></div><span>Claude AI</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/gemini.svg" alt="Gemini"></div><span>Gemini</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/langchain.svg" alt="LangChain"></div><span>LangChain</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/hugging-face.svg" alt="HuggingFace"></div><span>HuggingFace</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/mistral.svg" alt="Mistral"></div><span>Mistral</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/perplexity.svg" alt="Perplexity"></div><span>Perplexity</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/pinecone.svg" alt="Pinecone"></div><span>Pinecone</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/cursor.svg" alt="Cursor"></div><span>Cursor IDE</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/ollama.svg" alt="Ollama"></div><span>Ollama</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/llamaindex.svg" alt="LlamaIndex"></div><span>LlamaIndex</span></div></div>
         <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon" style="font-size:32px;display:flex;align-items:center;justify-content:center;">🤖</div><span>CrewAI</span></div></div>
     </div>
 </div>
@@ -86,18 +86,18 @@
 <div class="skill-category reveal-up">
     <h2 class="main-common-title skill-cat-title">💻 Frontend & UI Development</h2>
     <div class="row g-3 skills-grid">
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/html5.svg" alt="HTML5"></div><span>HTML5</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/css3.svg" alt="CSS3"></div><span>CSS3</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/javascript.svg" alt="JavaScript"></div><span>JavaScript</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/react.svg" alt="React"></div><span>React</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/nextjs_icon_dark.svg" alt="Next.js"></div><span>Next.js</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/typescript.svg" alt="TypeScript"></div><span>TypeScript</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/tailwindcss.svg" alt="Tailwind"></div><span>Tailwind</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/bootstrap.svg" alt="Bootstrap"></div><span>Bootstrap</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/angular.svg" alt="Angular"></div><span>Angular</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/vue.svg" alt="Vue"></div><span>Vue.js</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/sass.svg" alt="SASS"></div><span>SASS</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/nodejs.svg" alt="NodeJS"></div><span>Node.js</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/html5.svg" alt="HTML5"></div><span>HTML5</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/css3.svg" alt="CSS3"></div><span>CSS3</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/js.svg" alt="JavaScript"></div><span>JavaScript</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/react.svg" alt="React"></div><span>React</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/nextjs.svg" alt="Next.js"></div><span>Next.js</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/typescript.svg" alt="TypeScript"></div><span>TypeScript</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/tailwindcss.svg" alt="Tailwind"></div><span>Tailwind</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/bootstrap5.svg" alt="Bootstrap"></div><span>Bootstrap</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/angular.svg" alt="Angular"></div><span>Angular</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/vue.svg" alt="Vue"></div><span>Vue.js</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/sass.svg" alt="SASS"></div><span>SASS</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/nodejs.svg" alt="NodeJS"></div><span>Node.js</span></div></div>
     </div>
 </div>
 
@@ -105,14 +105,14 @@
 <div class="skill-category reveal-up">
     <h2 class="main-common-title skill-cat-title">☁️ Cloud & Infrastructure</h2>
     <div class="row g-3 skills-grid">
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/aws.svg" alt="AWS"></div><span>AWS</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/azure.svg" alt="Azure"></div><span>Azure</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/google-cloud.svg" alt="GCP"></div><span>GCP</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/docker.svg" alt="Docker"></div><span>Docker</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/kubernetes.svg" alt="Kubernetes"></div><span>Kubernetes</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/github-light.svg" alt="GitHub"></div><span>GitHub</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/vercel.svg" alt="Vercel"></div><span>Vercel</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/terraform.svg" alt="Terraform"></div><span>Terraform</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/aws.svg" alt="AWS"></div><span>AWS</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/azure.svg" alt="Azure"></div><span>Azure</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/google-cloud.svg" alt="GCP"></div><span>GCP</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/docker.svg" alt="Docker"></div><span>Docker</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/kubernetes.svg" alt="Kubernetes"></div><span>Kubernetes</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/github.svg" alt="GitHub"></div><span>GitHub</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/vercel.svg" alt="Vercel"></div><span>Vercel</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/terraform.svg" alt="Terraform"></div><span>Terraform</span></div></div>
     </div>
 </div>
 
@@ -120,16 +120,17 @@
 <div class="skill-category reveal-up">
     <h2 class="main-common-title skill-cat-title">📋 Testing & Project Management</h2>
     <div class="row g-3 skills-grid">
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/playwright.svg" alt="Playwright"></div><span>Playwright</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/cypress.svg" alt="Cypress"></div><span>Cypress</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/jest.svg" alt="Jest"></div><span>Jest</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/jira.svg" alt="Jira"></div><span>Jira</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/confluence.svg" alt="Confluence"></div><span>Confluence</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/slack.svg" alt="Slack"></div><span>Slack</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/linear.svg" alt="Linear"></div><span>Linear</span></div></div>
-        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://svgl.app/library/postman.svg" alt="Postman"></div><span>Postman</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/playwright.svg" alt="Playwright"></div><span>Playwright</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/cypress.svg" alt="Cypress"></div><span>Cypress</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/jest.svg" alt="Jest"></div><span>Jest</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/jira.svg" alt="Jira"></div><span>Jira</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/confluence.svg" alt="Confluence"></div><span>Confluence</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://cdn.jsdelivr.net/npm/tech-stack-icons/icons/slack.svg" alt="Slack"></div><span>Slack</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/linear.svg" alt="Linear"></div><span>Linear</span></div></div>
+        <div class="col-xl-2 col-md-3 col-sm-4 col-4"><div class="skill-card reveal-up"><div class="skill-icon"><img loading="lazy" src="https://raw.githubusercontent.com/pheralb/svgl/main/static/library/postman.svg" alt="Postman"></div><span>Postman</span></div></div>
     </div>
 </div>
+
 
 
 <!-- CTA Slider -->

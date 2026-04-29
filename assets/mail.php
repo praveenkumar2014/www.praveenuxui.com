@@ -26,8 +26,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $headers .= "Reply-To: {$email}" . "\r\n";
     
     if(mail($to, $subject, $body, $headers)){
-        // Redirect to thank you page or show success message
-        header("Location: https://www.pranuuxui.com/thank-you.html");
+        // Redirect to thank you page using relative path
+        header("Location: /thank-you");
         exit();
     } else {
         echo "Something went wrong. Please try again.";
