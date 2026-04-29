@@ -6,8 +6,6 @@
 		const isDarkMode = localStorage.getItem('darkMode') === 'true';
 		$('body').toggleClass('dark-theme', isDarkMode);
 
-		$('#page-content').fadeIn(0);
-
 		$('.theme-control-btn').on("click", function () {
 			$('body').toggleClass('dark-theme');
 

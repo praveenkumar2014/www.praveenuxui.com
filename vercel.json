@@ -3,51 +3,55 @@
   "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
+  "buildCommand": "echo 'Static site already built locally — skipping Vercel build.'",
+  "installCommand": "echo 'No install needed.'",
+  "outputDirectory": ".",
+  "framework": null,
   "functions": {
-    "*.php": { "runtime": "vercel-php@0.7.1" },
-    "assets/*.php": { "runtime": "vercel-php@0.7.1" }
+    "api/*.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
   },
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, immutable"
+        }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/index",             "destination": "/index.php" },
-    { "source": "/about",             "destination": "/about.php" },
-    { "source": "/services",          "destination": "/services.php" },
-    { "source": "/skills",            "destination": "/skills.php" },
-    { "source": "/portfolio",         "destination": "/portfolio.php" },
-    { "source": "/contact",           "destination": "/contact.php" },
-    { "source": "/blog",              "destination": "/blog.php" },
-    { "source": "/article",           "destination": "/article.php" },
-    { "source": "/gpay",              "destination": "/gpay.php" },
-    { "source": "/gmobile",           "destination": "/gmobile.php" },
-    { "source": "/gtresearch",        "destination": "/gtresearch.php" },
-    { "source": "/kd",                "destination": "/kd.php" },
-    { "source": "/portfolio-details", "destination": "/portfolio-details.php" },
-    { "source": "/thank-you",         "destination": "/thank-you.php" },
-    { "source": "/admin",             "destination": "/admin.php" },
-    { "source": "/login",             "destination": "/login.php" },
-    { "source": "/terms",             "destination": "/terms.php" },
-    { "source": "/privacy",           "destination": "/privacy.php" },
-    { "source": "/modern-portfolio",  "destination": "/modern-portfolio/index.php" },
-    { "source": "/modern-portfolio/portfolio", "destination": "/modern-portfolio/portfolio.php" },
-    { "source": "/modern-portfolio/skills",    "destination": "/modern-portfolio/skills.php" },
-    { "source": "/modern-portfolio/blog",      "destination": "/modern-portfolio/blog.php" },
-    { "source": "/modern-portfolio/admin",     "destination": "/modern-portfolio/admin/dashboard.php" }
+    {
+      "source": "/api/mail",
+      "destination": "/api/mail.php"
+    },
+    {
+      "source": "/assets/mail.php",
+      "destination": "/api/mail.php"
+    }
   ]
 }
-

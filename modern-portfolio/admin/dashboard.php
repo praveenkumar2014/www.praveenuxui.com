@@ -22,20 +22,7 @@
     </style>
 </head>
 <body>
-    <div class="sidebar d-flex flex-column">
-        <div class="logo-text mb-5" style="font-size: 24px; font-weight: 800;">M<span>admin</span></div>
-        <nav class="flex-grow-1">
-            <a href="dashboard" class="nav-link active"><i class="fas fa-th-large"></i> Dashboard</a>
-            <a href="manage-projects" class="nav-link"><i class="fas fa-briefcase"></i> Projects</a>
-            <a href="manage-blogs" class="nav-link"><i class="fas fa-blog"></i> Blogs</a>
-            <a href="manage-skills" class="nav-link"><i class="fas fa-tools"></i> Skills & Icons</a>
-            <a href="ai-job-agent" class="nav-link text-info"><i class="fas fa-robot"></i> AI Job Agent <span class="badge bg-primary ms-1">New</span></a>
-            <a href="ai-asset-lab" class="nav-link text-warning"><i class="fas fa-wand-magic-sparkles"></i> AI Asset Lab</a>
-            <a href="social-connect" class="nav-link"><i class="fas fa-share-alt"></i> Social Connect</a>
-            <a href="settings" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
-        </nav>
-        <a href="logout" class="nav-link btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
-    </div>
+    <?php include 'includes/sidebar.php'; ?>
 
     <div class="main-content">
         <header class="admin-header">
@@ -56,19 +43,19 @@
             <div class="col-md-4">
                 <div class="stat-card">
                     <div class="text-secondary small mb-1">Total Projects</div>
-                    <div class="h2 mb-0">12</div>
+                    <div class="h2 mb-0"><?php echo $db->querySingle("SELECT COUNT(*) FROM projects"); ?></div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="stat-card">
                     <div class="text-secondary small mb-1">Blog Posts</div>
-                    <div class="h2 mb-0">8</div>
+                    <div class="h2 mb-0"><?php echo $db->querySingle("SELECT COUNT(*) FROM blogs"); ?></div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="stat-card">
                     <div class="text-secondary small mb-1">Service Modules</div>
-                    <div class="h2 mb-0">6</div>
+                    <div class="h2 mb-0"><?php echo $db->querySingle("SELECT COUNT(*) FROM services") ?: 0; ?></div>
                 </div>
             </div>
         </div>

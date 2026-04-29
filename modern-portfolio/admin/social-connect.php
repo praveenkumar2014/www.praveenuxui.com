@@ -1,6 +1,7 @@
 <?php include 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Social Connect | Madmin</title>
@@ -8,33 +9,79 @@
     <link rel="stylesheet" href="../css/glassy.css">
     <link rel="stylesheet" href="../assets/fontawsome/css/all.min.css">
     <style>
-        :root { --sidebar-width: 260px; }
-        body { background: #080808; color: #fff; min-height: 100vh; }
-        .sidebar { width: var(--sidebar-width); position: fixed; height: 100vh; background: rgba(255, 255, 255, 0.02); border-right: 1px solid rgba(255, 255, 255, 0.05); padding: 30px 20px; backdrop-filter: blur(20px); }
-        .main-content { margin-left: var(--sidebar-width); padding: 40px; }
-        .nav-link { color: #888; padding: 12px 15px; border-radius: 12px; margin-bottom: 8px; transition: all 0.3s; display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .nav-link:hover, .nav-link.active { background: rgba(71, 112, 255, 0.1); color: #4770FF; }
-        .social-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
-        .status-badge { font-size: 11px; padding: 4px 10px; border-radius: 10px; font-weight: 700; text-transform: uppercase; }
-        .status-active { background: rgba(0,255,100,0.1); color: #00ff64; }
-        .status-inactive { background: rgba(255,255,255,0.05); color: #888; }
+        :root {
+            --sidebar-width: 260px;
+        }
+
+        body {
+            background: #080808;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            position: fixed;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.02);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 30px 20px;
+            backdrop-filter: blur(20px);
+        }
+
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 40px;
+        }
+
+        .nav-link {
+            color: #888;
+            padding: 12px 15px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: rgba(71, 112, 255, 0.1);
+            color: #4770FF;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .status-badge {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .status-active {
+            background: rgba(0, 255, 100, 0.1);
+            color: #00ff64;
+        }
+
+        .status-inactive {
+            background: rgba(255, 255, 255, 0.05);
+            color: #888;
+        }
     </style>
 </head>
+
 <body>
-    <div class="sidebar d-flex flex-column">
-        <div class="logo-text mb-5" style="font-size: 24px; font-weight: 800;">M<span>admin</span></div>
-        <nav class="flex-grow-1">
-            <a href="dashboard" class="nav-link"><i class="fas fa-th-large"></i> Dashboard</a>
-            <a href="manage-projects" class="nav-link"><i class="fas fa-briefcase"></i> Projects</a>
-            <a href="manage-blogs" class="nav-link"><i class="fas fa-blog"></i> Blogs</a>
-            <a href="manage-skills" class="nav-link"><i class="fas fa-tools"></i> Skills & Icons</a>
-            <a href="ai-job-agent" class="nav-link text-info"><i class="fas fa-robot"></i> AI Job Agent</a>
-            <a href="ai-asset-lab" class="nav-link text-warning"><i class="fas fa-wand-magic-sparkles"></i> AI Asset Lab</a>
-            <a href="social-connect" class="nav-link active"><i class="fas fa-share-alt"></i> Social Connect</a>
-            <a href="settings" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
-        </nav>
-        <a href="logout" class="nav-link btn-logout text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
-    </div>
+    <?php include 'includes/sidebar.php'; ?>
 
     <div class="main-content">
         <h1 class="mb-5" style="font-size: 32px; font-weight: 800;">Social Connect 🔗</h1>
@@ -74,8 +121,16 @@
                     </div>
                     <p class="text-secondary small mb-4">Share thought leadership articles and professional milestones.</p>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-outline-primary btn-sm flex-grow-1">Auto-Post Blog</button>
-                        <button class="btn btn-outline-info btn-sm">Career Insights</button>
+                        <select id="blog-to-post" class="form-select form-select-sm bg-dark text-white border-secondary w-auto">
+                            <option value="">Select Blog...</option>
+                            <?php
+                            $blog_list = $db->query('SELECT id, title FROM blogs ORDER BY id DESC LIMIT 5');
+                            while ($b = $blog_list->fetchArray(SQLITE3_ASSOC)) {
+                                echo "<option value='{$b['id']}'>{$b['title']}</option>";
+                            }
+                            ?>
+                        </select>
+                        <button class="btn btn-outline-primary btn-sm flex-grow-1" id="btn-post-linkedin" onclick="postToLinkedIn()">Auto-Post Blog</button>
                     </div>
                 </div>
             </div>
@@ -113,5 +168,46 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        async function postToLinkedIn() {
+            const blogId = document.getElementById('blog-to-post').value;
+            const btn = document.getElementById('btn-post-linkedin');
+
+            if (!blogId) {
+                alert("Please select a blog to post!");
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Posting...';
+
+            try {
+                const res = await fetch('api/social_post.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        action: 'post_blog',
+                        blog_id: blogId
+                    })
+                });
+                const data = await res.json();
+
+                if (data.error) {
+                    alert("Error: " + data.error);
+                } else {
+                    alert("✦ Successfully posted to LinkedIn!");
+                }
+            } catch (err) {
+                alert("Failed to connect to Social API.");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = 'Auto-Post Blog';
+            }
+        }
+    </script>
 </body>
+
 </html>

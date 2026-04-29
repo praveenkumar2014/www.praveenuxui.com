@@ -34,6 +34,31 @@ body {
   transition: background-color 0.5s ease;
 }
 
+/* ── Unified modal surface (Bootstrap modals) ── */
+.ux-modal-surface {
+  background: var(--card-bg);
+  color: var(--text-main);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+}
+
+.ux-modal-surface .modal-title { color: var(--text-main); }
+.ux-modal-surface .form-label { color: var(--text-main); opacity: 0.9; }
+.ux-modal-surface .form-control,
+.ux-modal-surface .form-select,
+.ux-modal-surface textarea {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+}
+.ux-modal-surface .form-control::placeholder,
+.ux-modal-surface textarea::placeholder { color: var(--text-dim); }
+.ux-modal-surface .btn-close { filter: invert(1); opacity: 0.7; }
+[data-theme="light"] .ux-modal-surface .btn-close { filter: none; }
+
 /* ── Glassy Background ── */
 #background-canvas {
   position: fixed;
@@ -54,10 +79,23 @@ body {
   animation: orbFloat 20s infinite alternate;
 }
 
-@keyframes orbFloat {
-  0% { transform: translate(-10%, -10%) scale(1); }
-  100% { transform: translate(20%, 20%) scale(1.2); }
+/* ── Skeleton Loading ── */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
+  background-size: 200% 100%;
+  animation: skeletonLoading 1.5s infinite;
+  border-radius: 8px;
 }
+
+@keyframes skeletonLoading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-text { height: 1rem; margin-bottom: 0.5rem; width: 100%; }
+.skeleton-title { height: 1.5rem; margin-bottom: 1rem; width: 60%; }
+.skeleton-img { aspect-ratio: 16/9; width: 100%; }
+.skeleton-circle { border-radius: 50%; width: 50px; height: 50px; }
 
 /* ── Layout ── */
 .app-container {

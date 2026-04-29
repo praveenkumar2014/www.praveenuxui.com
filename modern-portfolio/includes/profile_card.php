@@ -1,7 +1,7 @@
 <div class="card profile-card">
 <div class="card-body">
 <div class="image text-center">
-<img loading="lazy" src="assets/img/images/profile.png" alt="profile">
+<img loading="lazy" src="/assets/img/images/profile.png" alt="profile">
 </div>
 <div class="text">
 <h3 class="card-title">Praveen Kumar K 👋</h3>
@@ -11,7 +11,7 @@
     data-cal-link="praveenkumar-kanneganti" 
     data-cal-config='{"layout":"month_view"}'
     class="btn btn-call">Book A call</button>
-<a class="btn btn-call" href="assets/Praveen_Kumar_K_Resume.pdf" target="_blank">Download CV</a>
+<a class="btn btn-call" href="/assets/Praveen_Kumar_K_Resume.pdf" target="_blank">Download CV</a>
 <button class="btn btn-copy" data-clipboard-text="praveenkumar.kanneganti@gmail.com">Copy Email</button>
 </div>
 <div class="social-media-icon">

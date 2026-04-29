@@ -1,26 +1,26 @@
-import { defineConfig, devices } from '@playwright/test';
+const { defineConfig, devices } = require('@playwright/test');
 
-export default defineConfig({
-  testDir: './tests',
-  testMatch: '**/*.spec.js',
-  timeout: 30000,
-  retries: 1,
-  reporter: [['html', { open: 'never' }], ['list']],
+module.exports = defineConfig({
+  testDir: './tests/e2e',
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
+  reporter: 'html',
   use: {
-    baseURL: process.env.TEST_URL || 'http://localhost:3000',
-    headless: true,
+    baseURL: 'http://localhost:8000',
+    trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    trace: 'retain-on-failure',
+  },
+  webServer: {
+    command: 'php -S localhost:8000 -t .',
+    url: 'http://localhost:8000',
+    reuseExistingServer: !process.env.CI,
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-    { name: 'mobile', use: { ...devices['iPhone 13'] } },
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
   ],
-  webServer: {
-    command: 'npx serve . -p 3000 --no-clipboard',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-    timeout: 15000,
-  },
 });

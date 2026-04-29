@@ -8,7 +8,12 @@ function get_db() {
 function fetch_projects($limit = 10) {
     $db = get_db();
     if (!$db) return [];
-    $res = $db->query("SELECT * FROM projects ORDER BY id DESC LIMIT $limit");
+    $limit = (int)$limit;
+    if ($limit <= 0) {
+        $res = $db->query("SELECT * FROM projects ORDER BY id DESC");
+    } else {
+        $res = $db->query("SELECT * FROM projects ORDER BY id DESC LIMIT $limit");
+    }
     $data = [];
     while($row = $res->fetchArray(SQLITE3_ASSOC)) {
         $data[] = $row;
@@ -19,7 +24,12 @@ function fetch_projects($limit = 10) {
 function fetch_blogs($limit = 10) {
     $db = get_db();
     if (!$db) return [];
-    $res = $db->query("SELECT * FROM blogs ORDER BY id DESC LIMIT $limit");
+    $limit = (int)$limit;
+    if ($limit <= 0) {
+        $res = $db->query("SELECT * FROM blogs ORDER BY id DESC");
+    } else {
+        $res = $db->query("SELECT * FROM blogs ORDER BY id DESC LIMIT $limit");
+    }
     $data = [];
     while($row = $res->fetchArray(SQLITE3_ASSOC)) {
         $data[] = $row;

@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "php build.php",
-    "serve": "npx serve . -p 3000 --no-clipboard",
+    "serve": "php -S localhost:8000 router.php",
+    "serve:static": "npx serve . -p 3000 --no-clipboard",
     "test": "npm run test:playwright && npm run test:selenium",
     "test:playwright": "npx playwright test",
     "test:selenium": "node tests/selenium.test.js",
@@ -17,11 +18,27 @@
     "ci": "npm run build && npm run test"
   },
   "devDependencies": {
-    "@playwright/test": "^1.44.0",
-    "selenium-webdriver": "^4.20.0",
+    "@playwright/test": "^1.59.1",
+    "selenium-webdriver": "^4.43.0",
     "serve": "^14.2.3"
   },
   "dependencies": {
     "tech-stack-icons": "^3.7.1"
-  }
+  },
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenkumar2014/pranuuxui.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/praveenkumar2014/pranuuxui.com/issues"
+  },
+  "homepage": "https://github.com/praveenkumar2014/pranuuxui.com#readme"
 }

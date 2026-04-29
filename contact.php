@@ -75,7 +75,7 @@
                   <div class="contact-area">
                     <div class="leave-comments-area">
                       <div class="comments-box">
-                        <form id="contact-form" action="assets/mail.php" method="POST">
+                        <form id="contact-form" action="/api/mail" method="POST">
                           <div class="row gx-3">
                             <div class="col-md-6">
                               <div class="mb-4">

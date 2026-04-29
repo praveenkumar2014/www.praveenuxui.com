@@ -1,0 +1,28 @@
+node_modules/
+playwright-report/
+test-results/
+tests/
+scratch/
+logs/
+/vendor/
+/src/
+*.rar
+*.zip
+*.docx
+*.log
+.DS_Store
+npm-debug.log*
+playwright.config.js
+build.py
+build.php
+router.php
+composer.json
+composer.lock
+admin_info.md
+Dockerfile
+modern-portfolio/
+
+# Exclude root PHP source files — only api/*.php is deployed as Functions.
+# Static .html equivalents are produced by build.php and served instead.
+/*.php
+/assets/*.php

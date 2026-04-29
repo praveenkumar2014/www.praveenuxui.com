@@ -12,17 +12,18 @@ if(isset($_GET['delete'])) {
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(isset($_POST['id']) && !empty($_POST['id'])) {
         // Update
-        $stmt = $db->prepare('UPDATE projects SET title = :title, category = :cat, link = :link, image = :img WHERE id = :id');
+        $stmt = $db->prepare('UPDATE projects SET title = :title, category = :cat, link = :link, image = :img, description = :desc WHERE id = :id');
         $stmt->bindValue(':id', $_POST['id'], SQLITE3_INTEGER);
     } else {
         // Insert
-        $stmt = $db->prepare('INSERT INTO projects (title, category, link, image) VALUES (:title, :cat, :link, :img)');
+        $stmt = $db->prepare('INSERT INTO projects (title, category, link, image, description) VALUES (:title, :cat, :link, :img, :desc)');
     }
     
     $stmt->bindValue(':title', $_POST['title'], SQLITE3_TEXT);
     $stmt->bindValue(':cat', $_POST['category'], SQLITE3_TEXT);
     $stmt->bindValue(':link', $_POST['link'], SQLITE3_TEXT);
     $stmt->bindValue(':img', $_POST['image'], SQLITE3_TEXT);
+    $stmt->bindValue(':desc', $_POST['description'] ?? '', SQLITE3_TEXT);
     $stmt->execute();
     header('Location: manage-projects.php');
 }
@@ -53,17 +54,7 @@ $projects = $db->query('SELECT * FROM projects ORDER BY id DESC');
     </style>
 </head>
 <body>
-    <div class="sidebar d-flex flex-column">
-        <div class="logo-text mb-5" style="font-size: 24px; font-weight: 800;">M<span>admin</span></div>
-        <nav class="flex-grow-1">
-            <a href="dashboard" class="nav-link"><i class="fas fa-th-large"></i> Dashboard</a>
-            <a href="manage-projects" class="nav-link active"><i class="fas fa-briefcase"></i> Projects</a>
-            <a href="manage-blogs" class="nav-link"><i class="fas fa-blog"></i> Blogs</a>
-            <a href="manage-services" class="nav-link"><i class="fas fa-magic"></i> Services</a>
-            <a href="settings" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
-        </nav>
-        <a href="logout" class="nav-link btn-logout text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
-    </div>
+    <?php include 'includes/sidebar.php'; ?>
 
     <div class="main-content">
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -126,6 +117,10 @@ $projects = $db->query('SELECT * FROM projects ORDER BY id DESC');
                             <label class="form-label">Project Link</label>
                             <input type="text" name="link" id="projectLink" class="form-control">
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea name="description" id="projectDescription" class="form-control" rows="4" placeholder="1–3 lines about the problem, approach, and outcome."></textarea>
+                        </div>
                     </div>
                     <div class="modal-footer border-0">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -145,6 +140,7 @@ $projects = $db->query('SELECT * FROM projects ORDER BY id DESC');
             document.getElementById('projectCategory').value = '';
             document.getElementById('projectImage').value = '';
             document.getElementById('projectLink').value = '';
+            document.getElementById('projectDescription').value = '';
         }
         function editProject(project) {
             document.getElementById('modalTitle').innerText = 'Edit Project';
@@ -153,6 +149,7 @@ $projects = $db->query('SELECT * FROM projects ORDER BY id DESC');
             document.getElementById('projectCategory').value = project.category;
             document.getElementById('projectImage').value = project.image;
             document.getElementById('projectLink').value = project.link;
+            document.getElementById('projectDescription').value = project.description || '';
             new bootstrap.Modal(document.getElementById('addProjectModal')).show();
         }
     </script>

@@ -75,7 +75,7 @@
                   <div class="contact-area">
                     <div class="leave-comments-area">
                       <div class="comments-box">
-                        <form id="contact-form" action="assets/mail.php" method="POST">
+                        <form id="contact-form" action="admin/api/contact.php" method="POST">
                           <div class="row gx-3">
                             <div class="col-md-6">
                               <div class="mb-4">
@@ -110,7 +110,7 @@
                             <div class="col-md-12">
                               <div class="mb-4">
                                 <label class="form-label">Comment</label>
-                                <textarea name="message" class="form-control shadow-none" rows="4"
+                                <textarea name="message" required class="form-control shadow-none" rows="4"
                                   placeholder="Type details about your inquiry"></textarea>
                               </div>
                             </div>
@@ -137,7 +137,10 @@
                     <div class="booking-section" id="booking-section">
                       <div class="booking-header">
                         <h4>📅 Book a Discovery Call</h4>
-                        <p>Pick a time slot — I'll confirm within 2 hours.</p>
+                        <p>Book directly on Cal.com in a lightbox (recommended), or pick a quick slot below.</p>
+                        <div class="mt-2">
+                          <button data-cal-link="praveenkumar-kanneganti" data-cal-config='{"layout":"month_view"}' class="btn btn-call" type="button">Open Cal.com booking</button>
+                        </div>
                       </div>
                       <div class="booking-slots">
                         <button class="slot-btn" onclick="selectSlot(this)">Mon 10:00 AM IST</button>
@@ -203,11 +206,4 @@
       <!-- background shape area end -->
     </main>
     <!-- main area part end -->
-<div id="thankYouModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999;">
-  <div style="background:#fff; max-width:400px; margin:100px auto; padding:30px; text-align:center; border-radius:8px;">
-    <h3>Thank you!</h3>
-    <p>Your message has been sent successfully.</p>
-    <button onclick="document.getElementById('thankYouModal').style.display='none'" style="margin-top:15px; padding:8px 20px;">Close</button>
-  </div>
-</div>
    <?php include 'footer.php'; ?>

@@ -1,18 +1,35 @@
 (function ($) {
 	"use strict";
 
+	function syncThemeAttrs() {
+		const isDark = $('body').hasClass('dark-theme');
+		// Keep both systems in sync: CSS uses .dark-theme and [data-theme]
+		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+	}
+
 	// Theme color control js
 	$(document).ready(function () {
 		const isDarkMode = localStorage.getItem('darkMode') === 'true';
 		$('body').toggleClass('dark-theme', isDarkMode);
+		syncThemeAttrs();
 
 		$('#page-content').fadeIn(0);
+
+		// Render lucide icons (if loaded)
+		if (window.lucide && typeof window.lucide.createIcons === 'function') {
+			window.lucide.createIcons();
+		}
 
 		$('.theme-control-btn').on("click", function () {
 			$('body').toggleClass('dark-theme');
 
 			const isDark = $('body').hasClass('dark-theme');
 			localStorage.setItem('darkMode', isDark);
+			syncThemeAttrs();
+
+			if (window.lucide && typeof window.lucide.createIcons === 'function') {
+				window.lucide.createIcons();
+			}
 		});
 	});
 

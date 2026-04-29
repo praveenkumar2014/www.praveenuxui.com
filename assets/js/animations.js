@@ -15,10 +15,10 @@
     var ctx = canvas.getContext('2d');
     var W, H, particles = [];
     var isDark = document.body.classList.contains('dark-mode') ||
-                 document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.getAttribute('data-theme') === 'dark';
 
     function resize() {
-      W = canvas.width  = window.innerWidth;
+      W = canvas.width = window.innerWidth;
       H = canvas.height = window.innerHeight;
     }
     resize();
@@ -28,14 +28,14 @@
       this.reset();
     }
     Particle.prototype.reset = function () {
-      this.x    = Math.random() * W;
-      this.y    = H + Math.random() * 100;
-      this.r    = Math.random() * 60 + 20;
-      this.vx   = (Math.random() - 0.5) * 0.4;
-      this.vy   = -(Math.random() * 0.4 + 0.15);
+      this.x = Math.random() * W;
+      this.y = H + Math.random() * 100;
+      this.r = Math.random() * 60 + 20;
+      this.vx = (Math.random() - 0.5) * 0.4;
+      this.vy = -(Math.random() * 0.4 + 0.15);
       this.life = 0;
       this.maxL = Math.random() * 220 + 180;
-      this.hue  = Math.random() > 0.5 ? 230 : 270; // blue or purple
+      this.hue = Math.random() > 0.5 ? 230 : 270; // blue or purple
     };
 
     for (var i = 0; i < 28; i++) {
@@ -48,13 +48,13 @@
     function draw() {
       ctx.clearRect(0, 0, W, H);
       particles.forEach(function (p) {
-        p.x   += p.vx;
-        p.y   += p.vy;
+        p.x += p.vx;
+        p.y += p.vy;
         p.life += 1;
-        p.r   += 0.08;
+        p.r += 0.08;
 
         var progress = p.life / p.maxL;
-        var alpha    = Math.sin(Math.PI * progress) * 0.07;
+        var alpha = Math.sin(Math.PI * progress) * 0.07;
 
         var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
         grad.addColorStop(0, 'hsla(' + p.hue + ', 70%, 65%, ' + alpha + ')');
@@ -80,7 +80,7 @@
     document.body.appendChild(glow);
     document.addEventListener('mousemove', function (e) {
       glow.style.left = e.clientX + 'px';
-      glow.style.top  = e.clientY + 'px';
+      glow.style.top = e.clientY + 'px';
     });
   }
 
@@ -118,12 +118,12 @@
 
   /* ── 4. COUNTER ANIMATION ────────────────────────────────── */
   function animateCounter(el, target, duration) {
-    var start   = 0;
+    var start = 0;
     var startTs = null;
     function step(ts) {
       if (!startTs) startTs = ts;
       var progress = Math.min((ts - startTs) / duration, 1);
-      var eased    = 1 - Math.pow(1 - progress, 3); // ease out cubic
+      var eased = 1 - Math.pow(1 - progress, 3); // ease out cubic
       el.textContent = Math.floor(eased * target) + (el.dataset.suffix || '');
       if (progress < 1) requestAnimationFrame(step);
     }
@@ -137,7 +137,7 @@
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          var el     = entry.target;
+          var el = entry.target;
           var target = parseInt(el.dataset.counter, 10);
           animateCounter(el, target, 1800);
           observer.unobserve(el);
@@ -168,7 +168,7 @@
       }
       var slot = selected.textContent;
       var subject = encodeURIComponent('Booking Request — ' + slot);
-      var body    = encodeURIComponent(
+      var body = encodeURIComponent(
         'Hi Praveen,\n\nI would like to book a call on: ' + slot +
         '\n\nPlease confirm the appointment.\n\nBest regards,'
       );
@@ -187,14 +187,22 @@
       var btn = form.querySelector('.submit-btn');
       if (btn) {
         btn.textContent = 'Sending…';
-        btn.disabled    = true;
+        btn.disabled = true;
       }
 
       var data = new FormData(form);
       fetch(form.action, { method: 'POST', body: data })
-        .then(function (res) { return res.text(); })
-        .then(function () {
-          showFormSuccess(form);
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.success) {
+            showFormSuccess(form);
+          } else {
+            alert(data.error || 'An error occurred.');
+            if (btn) {
+              btn.textContent = 'Send Message';
+              btn.disabled = false;
+            }
+          }
         })
         .catch(function () {
           // Still show success UI for demo (local can't send mail without SMTP)
@@ -231,7 +239,7 @@
       if (now !== scrolled) {
         scrolled = now;
         header.style.backdropFilter = scrolled ? 'blur(16px)' : '';
-        header.style.boxShadow      = scrolled
+        header.style.boxShadow = scrolled
           ? '0 2px 24px rgba(0,0,0,0.08)'
           : '';
       }
@@ -268,8 +276,6 @@
         behavior: 'smooth'
       });
     });
-  }
-
   }
 
   /* ── PORTFOLIO FILTER ────────────────────────────────────── */
@@ -333,8 +339,8 @@
 })();
 
 /* ── SKILLS LIGHTBOX ─────────────────────────────────────── */
-(function() {
-  document.addEventListener('DOMContentLoaded', function() {
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     // Create lightbox element
     var lb = document.createElement('div');
     lb.id = 'skill-lightbox';
@@ -342,19 +348,19 @@
     lb.innerHTML = '<button class="skill-lightbox-close" id="lb-close">&times;</button><img id="lb-img" src="" alt=""><h3 id="lb-name"></h3>';
     document.body.appendChild(lb);
 
-    document.getElementById('lb-close').addEventListener('click', function() {
+    document.getElementById('lb-close').addEventListener('click', function () {
       lb.classList.remove('active');
     });
-    lb.addEventListener('click', function(e) {
+    lb.addEventListener('click', function (e) {
       if (e.target === lb) lb.classList.remove('active');
     });
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') lb.classList.remove('active');
     });
 
     // Attach click to skill cards
-    document.querySelectorAll('.skill-card').forEach(function(card) {
-      card.addEventListener('click', function() {
+    document.querySelectorAll('.skill-card').forEach(function (card) {
+      card.addEventListener('click', function () {
         var img = card.querySelector('img');
         var name = card.querySelector('span') ? card.querySelector('span').textContent : '';
         if (img) {
@@ -371,8 +377,8 @@
     // Lazy load IntersectionObserver for images not yet loaded
     if ('IntersectionObserver' in window) {
       var lazyImgs = document.querySelectorAll('img[loading="lazy"]');
-      var imgObs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
+      var imgObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             var img = entry.target;
             if (img.dataset.src) { img.src = img.dataset.src; }
@@ -380,7 +386,7 @@
           }
         });
       }, { rootMargin: '200px' });
-      lazyImgs.forEach(function(img) { imgObs.observe(img); });
+      lazyImgs.forEach(function (img) { imgObs.observe(img); });
     }
   });
 })();

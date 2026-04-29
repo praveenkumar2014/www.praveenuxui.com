@@ -1,0 +1,103 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Praveen Portfolio API",
+    "description": "API for managing projects, blogs, skills, and AI interactions.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/modern-portfolio/admin/api",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/ai_chat.php": {
+      "post": {
+        "summary": "Interact with the AI Assistant",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "response": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/projects.php": {
+      "get": {
+        "summary": "Fetch projects",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of projects"
+          }
+        }
+      }
+    },
+    "/skills.php": {
+      "get": {
+        "summary": "Fetch skills",
+        "responses": {
+          "200": {
+            "description": "List of skills"
+          }
+        }
+      }
+    },
+    "/contact.php": {
+      "post": {
+        "summary": "Submit contact form",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string" },
+                  "subject": { "type": "string" },
+                  "message": { "type": "string" },
+                  "budget": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success or error message"
+          }
+        }
+      }
+    }
+  }
+}

@@ -50,14 +50,25 @@ function sendAIQuery() {
     input.value = '';
     
     // AI Response Logic
-    setTimeout(() => {
-        let response = "I'm processing that. Let me help you with your portfolio...";
-        if(query.toLowerCase().includes('job')) response = "I've scanned LinkedIn and found 3 new UX Architect roles paying over 80L. Check the AI Job Agent tab!";
-        if(query.toLowerCase().includes('image')) response = "Redirecting you to the AI Asset Lab to generate that image...";
-        if(query.toLowerCase().includes('post')) response = "I've drafted a new blog post about 'AI in UX'. Would you like to review it in the Blogs section?";
-        
-        addMessage(response, 'bot');
-    }, 1000);
+    fetch('api/ai_chat.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: query })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.error) {
+            addMessage("Error: " + data.error, 'bot');
+        } else {
+            addMessage(data.response, 'bot');
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        addMessage("Sorry, I'm having trouble connecting to the AI server.", 'bot');
+    });
 }
 
 function addMessage(text, type) {

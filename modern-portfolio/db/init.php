@@ -41,14 +41,26 @@ $db->exec("CREATE TABLE IF NOT EXISTS settings (
 )");
 
 // Admin User Table
-$db->exec("CREATE TABLE IF NOT EXISTS users (
+$db->exec("DROP TABLE IF EXISTS users");
+$db->exec("CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE,
-    password TEXT
+    password TEXT,
+    role TEXT DEFAULT 'admin'
 )");
 
 // Insert default admin if not exists (username: admin, password: admin123)
-$db->exec("INSERT OR IGNORE INTO users (username, password) VALUES ('admin', '" . password_hash('admin123', PASSWORD_DEFAULT) . "')");
+$db->exec("INSERT OR IGNORE INTO users (username, password, role) VALUES ('admin', '" . password_hash('admin123', PASSWORD_DEFAULT) . "', 'super_admin')");
+
+// Contacts Table
+$db->exec("CREATE TABLE IF NOT EXISTS contacts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    subject TEXT,
+    message TEXT NOT NULL,
+    status TEXT DEFAULT 'unread',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+)");
 
 echo "Database initialized successfully at: " . $db_path;
-?>

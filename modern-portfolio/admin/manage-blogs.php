@@ -52,17 +52,7 @@ $blogs = $db->query('SELECT * FROM blogs ORDER BY id DESC');
     </style>
 </head>
 <body>
-    <div class="sidebar d-flex flex-column">
-        <div class="logo-text mb-5" style="font-size: 24px; font-weight: 800;">M<span>admin</span></div>
-        <nav class="flex-grow-1">
-            <a href="dashboard" class="nav-link"><i class="fas fa-th-large"></i> Dashboard</a>
-            <a href="manage-projects" class="nav-link"><i class="fas fa-briefcase"></i> Projects</a>
-            <a href="manage-blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
-            <a href="manage-services" class="nav-link"><i class="fas fa-magic"></i> Services</a>
-            <a href="settings" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
-        </nav>
-        <a href="logout" class="nav-link btn-logout text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
-    </div>
+    <?php include 'includes/sidebar.php'; ?>
 
     <div class="main-content">
         <div class="d-flex justify-content-between align-items-center mb-4">
