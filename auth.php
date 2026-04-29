@@ -2,7 +2,9 @@
 /**
  * auth.php — Authentication logic for Praveen's Portfolio Admin
  */
-session_start();
+if (php_sapi_name() !== 'cli' && session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Define Admin credentials (Super Admin)
 define('ADMIN_USER', 'admin');
@@ -13,6 +15,10 @@ function is_logged_in() {
 }
 
 function require_login() {
+    // Skip login check during static site build (CLI mode)
+    if (php_sapi_name() === 'cli') {
+        return;
+    }
     if (!is_logged_in()) {
         header("Location: login.php");
         exit();
