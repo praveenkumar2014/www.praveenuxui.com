@@ -87,6 +87,8 @@
                         <li><a href="https://www.facebook.com/pranu21m/" target="_blank"><i class="fab fa-facebook"></i></a></li>
 <li><a href="https://www.linkedin.com/in/praveenkumarkanneganti/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 <li><a href="https://www.behance.net/praveen-ui-ux"target="_blank"><i class="fab fa-behance"></i></a></li>
+<li><a href="#" onclick="event.preventDefault();alert('Job Offer? WhatsApp: +918884263999');window.open('https://wa.me/918884263999?text=Hi+Praveen+I+have+a+Job+Offer','_blank');" title="WhatsApp"><i class="fab fa-whatsapp" style="color:#25D366"></i></a></li>
+<li><a href="#" onclick="event.preventDefault();alert('Job Offer? Telegram: +918884263999');window.open('https://t.me/+918884263999','_blank');" title="Telegram"><i class="fab fa-telegram" style="color:#0088cc"></i></a></li>
                       </ul>
                     </div>
                   </div>

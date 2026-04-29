@@ -1,9 +1,11 @@
 <?php
   // ── PHP Active Navigation Detection ──────────────────────
   $current_page = basename($_SERVER['PHP_SELF']);
-  function nav_active($page) {
-    global $current_page;
-    return ($current_page === $page) ? ' active' : '';
+  if (!function_exists('nav_active')) {
+    function nav_active($page) {
+      global $current_page;
+      return ($current_page === $page) ? ' active' : '';
+    }
   }
 ?>
 <!DOCTYPE html>
@@ -134,6 +136,14 @@
                         stroke-linejoin="round" />
                     </svg>
                     Expert
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link<?php echo nav_active('skills.php'); ?>" href="skills.php">
+                    <svg class="nav-icon" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 2L11.09 6.26L16 7L12.5 10.41L13.18 15.32L9 13.27L4.82 15.32L5.5 10.41L2 7L6.91 6.26L9 2Z" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Skills
                   </a>
                 </li>
                 <li class="nav-item">

@@ -16,7 +16,7 @@
                   <h3 class="card-title">Praveen Kumar K 👋</h3>
                     <p>Senior UX/UI Architect & <span class="ai-badge">✦ AI Agentic</span> Design Strategist with <strong>18+ years</strong> of experience across <strong>14+ countries</strong>. Expert in HCI, Behavioural UX, Generative AI & Enterprise Design Systems.</p>
                     <div class="common-button-groups">
-                      <a class="btn btn-call" href="#">
+                      <a class="btn btn-call" href="contact.php#booking-section">
                         <svg class="icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -54,6 +54,8 @@
                         <li><a href="https://www.facebook.com/pranu21m/" target="_blank"><i class="fab fa-facebook"></i></a></li>
 <li><a href="https://www.linkedin.com/in/praveenkumarkanneganti/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 <li><a href="https://www.behance.net/praveen-ui-ux"target="_blank"><i class="fab fa-behance"></i></a></li>
+<li><a href="#" onclick="event.preventDefault();alert('Job Offer? WhatsApp: +918884263999');window.open('https://wa.me/918884263999?text=Hi+Praveen+I+have+a+Job+Offer','_blank');" title="WhatsApp"><i class="fab fa-whatsapp" style="color:#25D366"></i></a></li>
+<li><a href="#" onclick="event.preventDefault();alert('Job Offer? Telegram: +918884263999');window.open('https://t.me/+918884263999','_blank');" title="Telegram"><i class="fab fa-telegram" style="color:#0088cc"></i></a></li>
                       </ul>
                     </div>
                   </div>
@@ -82,7 +84,7 @@
                               <a href="article.html" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.html" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -100,7 +102,7 @@
                               <a href="article.html" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.html" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -118,7 +120,7 @@
                               <a href="article.html" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.html" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -136,7 +138,7 @@
                               <a href="article.html" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.html" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -154,7 +156,7 @@
                               <a href="article.html" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.html" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -172,7 +174,7 @@
                               <a href="article.html" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.html" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -252,28 +254,4 @@
     </main>
     <!-- main area part end -->
 
-    <!-- footer part start -->
-    <footer class="footer-area">
-      <div class="container">
-        <div class="text text-center">
-          <p>@ PraveenUXU 2024, Design By <a href="#">www.pranuuxui.com</a></p>
-        </div>
-      </div>
-    </footer>
-    <!-- footer part end -->
-  </div>
-
-  <!-- JS here -->
-  <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/ajax-form.js"></script>
-  <script src="assets/js/clipboard.min.js"></script>
-  <script src="assets/js/slick.min.js"></script>
-  <script src="assets/js/script.js"></script>
-</body>
-
-
-
-<!-- Mirrored from www.pranuuxui.com.com/tf/html/PraveenUXU-html/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Mar 2025 07:38:09 GMT -->
-</html>
+<?php include 'footer.php'; ?>

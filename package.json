@@ -1,0 +1,24 @@
+{
+  "name": "praveenuxui-portfolio",
+  "version": "1.0.0",
+  "description": "Praveen Kumar K - Senior UX/UI Architect & AI Agentic Design Strategist Portfolio",
+  "private": true,
+  "scripts": {
+    "build": "php build.php",
+    "serve": "npx serve . -p 3000 --no-clipboard",
+    "test": "npm run test:playwright && npm run test:selenium",
+    "test:playwright": "npx playwright test",
+    "test:selenium": "node tests/selenium.test.js",
+    "test:playwright:ui": "npx playwright test --ui",
+    "test:playwright:report": "npx playwright show-report",
+    "predeploy": "php build.php",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel",
+    "ci": "npm run build && npm run test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "selenium-webdriver": "^4.20.0",
+    "serve": "^14.2.3"
+  }
+}

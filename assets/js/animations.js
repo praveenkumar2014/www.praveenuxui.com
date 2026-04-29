@@ -243,7 +243,7 @@
     var page = window.location.pathname.split('/').pop().replace('.php', '').replace('.html', '') || 'index';
     document.querySelectorAll('.nav-link').forEach(function (a) {
       var href = (a.getAttribute('href') || '').replace('.php', '').replace('.html', '');
-      if (href === page || (page === '' && href === 'index')) {
+      if (href === page || (page === '' && href === 'index') || (page === 'skills' && href === 'skills')) {
         a.classList.add('active');
       }
     });
@@ -330,4 +330,57 @@
     };
   });
 
+})();
+
+/* ── SKILLS LIGHTBOX ─────────────────────────────────────── */
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Create lightbox element
+    var lb = document.createElement('div');
+    lb.id = 'skill-lightbox';
+    lb.className = 'skill-lightbox';
+    lb.innerHTML = '<button class="skill-lightbox-close" id="lb-close">&times;</button><img id="lb-img" src="" alt=""><h3 id="lb-name"></h3>';
+    document.body.appendChild(lb);
+
+    document.getElementById('lb-close').addEventListener('click', function() {
+      lb.classList.remove('active');
+    });
+    lb.addEventListener('click', function(e) {
+      if (e.target === lb) lb.classList.remove('active');
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') lb.classList.remove('active');
+    });
+
+    // Attach click to skill cards
+    document.querySelectorAll('.skill-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var img = card.querySelector('img');
+        var name = card.querySelector('span') ? card.querySelector('span').textContent : '';
+        if (img) {
+          document.getElementById('lb-img').src = img.src;
+          document.getElementById('lb-img').alt = img.alt;
+        } else {
+          document.getElementById('lb-img').src = '';
+        }
+        document.getElementById('lb-name').textContent = name;
+        lb.classList.add('active');
+      });
+    });
+
+    // Lazy load IntersectionObserver for images not yet loaded
+    if ('IntersectionObserver' in window) {
+      var lazyImgs = document.querySelectorAll('img[loading="lazy"]');
+      var imgObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var img = entry.target;
+            if (img.dataset.src) { img.src = img.dataset.src; }
+            imgObs.unobserve(img);
+          }
+        });
+      }, { rootMargin: '200px' });
+      lazyImgs.forEach(function(img) { imgObs.observe(img); });
+    }
+  });
 })();

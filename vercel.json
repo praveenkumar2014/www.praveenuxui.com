@@ -9,21 +9,31 @@
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
         { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, immutable" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/",             "destination": "/index.html" },
-    { "source": "/about",        "destination": "/about.html" },
-    { "source": "/services",     "destination": "/services.html" },
-    { "source": "/portfolio",    "destination": "/portfolio.html" },
-    { "source": "/contact",      "destination": "/contact.html" },
-    { "source": "/blog",         "destination": "/blog.html" },
-    { "source": "/article",      "destination": "/article.html" },
-    { "source": "/gpay",         "destination": "/gpay.html" },
-    { "source": "/gmobile",      "destination": "/gmobile.html" },
-    { "source": "/gtresearch",   "destination": "/gtresearch.html" },
-    { "source": "/kd",           "destination": "/kd.html" }
+    { "source": "/",                  "destination": "/index.html" },
+    { "source": "/about",             "destination": "/about.html" },
+    { "source": "/services",          "destination": "/services.html" },
+    { "source": "/skills",            "destination": "/skills.html" },
+    { "source": "/portfolio",         "destination": "/portfolio.html" },
+    { "source": "/contact",           "destination": "/contact.html" },
+    { "source": "/blog",              "destination": "/blog.html" },
+    { "source": "/article",           "destination": "/article.html" },
+    { "source": "/gpay",              "destination": "/gpay.html" },
+    { "source": "/gmobile",           "destination": "/gmobile.html" },
+    { "source": "/gtresearch",        "destination": "/gtresearch.html" },
+    { "source": "/kd",                "destination": "/kd.html" },
+    { "source": "/portfolio-details", "destination": "/portfolio-details.html" },
+    { "source": "/thank-you",         "destination": "/thank-you.html" }
   ]
 }
