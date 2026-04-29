@@ -23,7 +23,11 @@ $pages = [
     'gtresearch.php'      => 'gtresearch.html',
     'kd.php'              => 'kd.html',
     'portfolio-details.php' => 'portfolio-details.html',
-    'thank-you.php'       => 'thank-you.html',
+    'thank-you.php'         => 'thank-you.html',
+    'login.php'             => 'login.html',
+    'admin.php'             => 'admin.html',
+    'terms.php'             => 'terms.html',
+    'privacy.php'           => 'privacy.html',
 ];
 
 $built  = 0;
