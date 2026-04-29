@@ -20,5 +20,8 @@
     "@playwright/test": "^1.44.0",
     "selenium-webdriver": "^4.20.0",
     "serve": "^14.2.3"
+  },
+  "dependencies": {
+    "tech-stack-icons": "^3.7.1"
   }
 }

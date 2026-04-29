@@ -16,7 +16,7 @@
                   <h3 class="card-title">Praveen Kumar K 👋</h3>
                     <p>Senior UX/UI Architect & <span class="ai-badge">✦ AI Agentic</span> Design Strategist with <strong>18+ years</strong> of experience across <strong>14+ countries</strong>. Expert in HCI, Behavioural UX, Generative AI & Enterprise Design Systems.</p>
                     <div class="common-button-groups">
-                      <a class="btn btn-call" href="contact.php">
+                      <a class="btn btn-call" href="contact">
                         <svg class="icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -750,12 +750,12 @@
                   <div class="work-together-slider">
                     <div class="slider-main d-flex gap-4 align-items-center">
                       <div class="slider-item">
-                        <a href="contact.php">Let's 👋 Work Together</a>
-                        <a href="contact.php">Let's 👋 Work Together</a>
+                        <a href="contact">Let's 👋 Work Together</a>
+                        <a href="contact">Let's 👋 Work Together</a>
                       </div>
                       <div class="slider-item">
-                        <a href="contact.php">Let's 👋 Work Together</a>
-                        <a href="contact.php">Let's 👋 Work Together</a>
+                        <a href="contact">Let's 👋 Work Together</a>
+                        <a href="contact">Let's 👋 Work Together</a>
                       </div>
                     </div>
                   </div>

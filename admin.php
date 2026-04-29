@@ -13,9 +13,9 @@ include 'header.php';
                         <div class="card-body">
                             <h4 class="mb-4">Admin Menu</h4>
                             <ul class="list-unstyled">
-                                <li class="mb-3"><a href="admin.php" class="text-primary"><i class="fas fa-home me-2"></i> Dashboard</a></li>
-                                <li class="mb-3"><a href="index.php"><i class="fas fa-eye me-2"></i> View Site</a></li>
-                                <li class="mb-3"><a href="logout.php" class="text-danger"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                                <li class="mb-3"><a href="admin" class="text-primary"><i class="fas fa-home me-2"></i> Dashboard</a></li>
+                                <li class="mb-3"><a href="index"><i class="fas fa-eye me-2"></i> View Site</a></li>
+                                <li class="mb-3"><a href="logout" class="text-danger"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
                             </ul>
                         </div>
                     </div>

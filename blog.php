@@ -16,7 +16,7 @@
                   <h3 class="card-title">Praveen Kumar K 👋</h3>
                     <p>Senior UX/UI Architect & <span class="ai-badge">✦ AI Agentic</span> Design Strategist with <strong>18+ years</strong> of experience across <strong>14+ countries</strong>. Expert in HCI, Behavioural UX, Generative AI & Enterprise Design Systems.</p>
                     <div class="common-button-groups">
-                      <a class="btn btn-call" href="contact.php#booking-section">
+                      <a class="btn btn-call" href="contact#booking-section">
                         <svg class="icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -78,13 +78,13 @@
                         <div class="col-xl-6 col-lg-4 col-md-6">
                           <div class="article-publications-item">
                             <div class="image">
-                              <a href="article.html" class="d-block w-100">
+                              <a href="article" class="d-block w-100">
                                 <img loading="lazy" src="assets/img/blog/blog-img-1.jpg" alt="blog-img-1" class="img-fluid w-100">
                               </a>
-                              <a href="article.html" class="tags">Development</a>
+                              <a href="article" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -96,13 +96,13 @@
                         <div class="col-xl-6 col-lg-4 col-md-6">
                           <div class="article-publications-item">
                             <div class="image">
-                              <a href="article.html" class="d-block w-100">
+                              <a href="article" class="d-block w-100">
                                 <img loading="lazy" src="assets/img/blog/blog-img-2.jpg" alt="blog-img-2" class="img-fluid w-100">
                               </a>
-                              <a href="article.html" class="tags">Development</a>
+                              <a href="article" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -114,13 +114,13 @@
                         <div class="col-xl-6 col-lg-4 col-md-6">
                           <div class="article-publications-item">
                             <div class="image">
-                              <a href="article.html" class="d-block w-100">
+                              <a href="article" class="d-block w-100">
                                 <img loading="lazy" src="assets/img/blog/blog-img-3.jpg" alt="blog-img-3" class="img-fluid w-100">
                               </a>
-                              <a href="article.html" class="tags">Development</a>
+                              <a href="article" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -132,13 +132,13 @@
                         <div class="col-xl-6 col-lg-4 col-md-6">
                           <div class="article-publications-item">
                             <div class="image">
-                              <a href="article.html" class="d-block w-100">
+                              <a href="article" class="d-block w-100">
                                 <img loading="lazy" src="assets/img/blog/blog-img-4.jpg" alt="blog-img-4" class="img-fluid w-100">
                               </a>
-                              <a href="article.html" class="tags">Development</a>
+                              <a href="article" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -150,13 +150,13 @@
                         <div class="col-xl-6 col-lg-4 col-md-6">
                           <div class="article-publications-item">
                             <div class="image">
-                              <a href="article.html" class="d-block w-100">
+                              <a href="article" class="d-block w-100">
                                 <img loading="lazy" src="assets/img/blog/blog-img-5.jpg" alt="blog-img-5" class="img-fluid w-100">
                               </a>
-                              <a href="article.html" class="tags">Development</a>
+                              <a href="article" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>
@@ -168,13 +168,13 @@
                         <div class="col-xl-6 col-lg-4 col-md-6">
                           <div class="article-publications-item">
                             <div class="image">
-                              <a href="article.html" class="d-block w-100">
+                              <a href="article" class="d-block w-100">
                                 <img loading="lazy" src="assets/img/blog/blog-img-6.jpg" alt="blog-img-6" class="img-fluid w-100">
                               </a>
-                              <a href="article.html" class="tags">Development</a>
+                              <a href="article" class="tags">Development</a>
                             </div>
                             <div class="text">
-                              <a href="article.php" class="title">Want To Upgrade Your Brain? Stop Doing These 7
+                              <a href="article" class="title">Want To Upgrade Your Brain? Stop Doing These 7
                                 Things</a>
                               <ul class="list-unstyled">
                                 <li>15 min read</li>

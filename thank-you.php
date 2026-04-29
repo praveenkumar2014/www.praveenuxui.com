@@ -11,7 +11,7 @@
                             </div>
                             <h1 class="main-title mb-3">Thank You!</h1>
                             <p class="mb-4">Your message has been received successfully. I will get back to you within 24 hours.</p>
-                            <a href="index.php" class="lets-talk-btn d-inline-flex">
+                            <a href="index" class="lets-talk-btn d-inline-flex">
                                 Back to Home
                                 <svg class="icon ms-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.5 11.6665V6.6665H12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

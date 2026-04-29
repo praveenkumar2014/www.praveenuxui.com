@@ -15,7 +15,7 @@
                     <h3 class="card-title">Praveen Kumar K 👋</h3>
                     <p>Senior UX/UI Architect &amp; <span class="ai-badge">✦ AI Agentic</span> Design Strategist with <strong>18+ years</strong> of experience across <strong>14+ countries</strong>. Expert in Human-Computer Interaction, Behavioural UX Analysis, Generative AI product experiences &amp; Design Systems for B2B, B2C and enterprise platforms.</p>
                     <div class="common-button-groups">
-                      <a class="btn btn-call" href="contact.php">
+                      <a class="btn btn-call" href="contact">
                         <svg class="icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -515,7 +515,7 @@
               <div class="card card-projects">
                 <div class="card-body">
   
-                  <h3 class="card-title">Recent Projects <a class="link-btn" href="portfolio.php">All Projects
+                  <h3 class="card-title">Recent Projects <a class="link-btn" href="portfolio">All Projects
                   <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.16699 10H15.8337" stroke="#4770FF" stroke-width="1.5" stroke-linecap="round"
@@ -613,7 +613,7 @@
                 <div class="card services-card">
                   <div class="card-body">
                     <h3 class="card-title">My Expert Area ↓
-                      <a class="link-btn" href="services.php"> All Skill set
+                      <a class="link-btn" href="services"> All Skill set
                         <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M4.16699 10H15.8337" stroke="#4770FF" stroke-width="1.5" stroke-linecap="round"
@@ -732,7 +732,7 @@
                     <h3 class="card-title">Let's👋
                       <span class="d-block">Work Together</span>
                     </h3>
-                    <a class="link-btn" href="contact.php"> Let's Talk
+                    <a class="link-btn" href="contact"> Let's Talk
                       <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.5 11.6665V6.6665H12.5" stroke-width="1.5" stroke-linecap="round"

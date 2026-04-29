@@ -42,7 +42,12 @@
     { "source": "/admin",             "destination": "/admin.php" },
     { "source": "/login",             "destination": "/login.php" },
     { "source": "/terms",             "destination": "/terms.php" },
-    { "source": "/privacy",           "destination": "/privacy.php" }
+    { "source": "/privacy",           "destination": "/privacy.php" },
+    { "source": "/modern-portfolio",  "destination": "/modern-portfolio/index.php" },
+    { "source": "/modern-portfolio/portfolio", "destination": "/modern-portfolio/portfolio.php" },
+    { "source": "/modern-portfolio/skills",    "destination": "/modern-portfolio/skills.php" },
+    { "source": "/modern-portfolio/blog",      "destination": "/modern-portfolio/blog.php" },
+    { "source": "/modern-portfolio/admin",     "destination": "/modern-portfolio/admin/dashboard.php" }
   ]
 }
 
