@@ -9,6 +9,10 @@
 $root = __DIR__;
 $host = 'pranuuxui.com';
 
+// Suppress header/session warnings during CLI build
+ini_set('display_errors', 0);
+error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+
 $pages = [
     'index.php'           => 'index.html',
     'about.php'           => 'about.html',
