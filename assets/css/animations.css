@@ -1,0 +1,624 @@
+/* ============================================================
+   PRAVEEN KUMAR K — PORTFOLIO ANIMATIONS
+   Additive layer — does not override existing style.css
+   ============================================================ */
+
+/* ── Particle / Smoke Canvas ─────────────────────────────── */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+#page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Scroll Reveal Initial States ────────────────────────── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Stagger Delays ──────────────────────────────────────── */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.19s; }
+.stagger-4 { transition-delay: 0.26s; }
+.stagger-5 { transition-delay: 0.33s; }
+.stagger-6 { transition-delay: 0.40s; }
+.stagger-7 { transition-delay: 0.47s; }
+.stagger-8 { transition-delay: 0.54s; }
+
+/* ── Gradient Animated Headings ──────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #4770FF 0%, #a855f7 50%, #ec4899 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Glow Pulse on Cards ─────────────────────────────────── */
+.card {
+  transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(71, 112, 255, 0.15), 0 4px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* ── Expertise / Skill Item Hover ────────────────────────── */
+.expertise-item {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease !important;
+  border-radius: 12px;
+}
+.expertise-item:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(71, 112, 255, 0.18);
+}
+
+.services-item {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  border-radius: 12px;
+}
+.services-item:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* ── svgl Icon Sizing in Expertise Grid ──────────────────── */
+.expertise-item .image img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(71, 112, 255, 0.25));
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+}
+.expertise-item:hover .image img {
+  transform: rotate(-6deg) scale(1.15);
+  filter: drop-shadow(0 4px 12px rgba(71, 112, 255, 0.5));
+}
+
+/* ── Stats Counter Section ───────────────────────────────── */
+.stats-section {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 20px 0 8px;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #4770FF, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-size: 0.72rem;
+  opacity: 0.65;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ── Available Badge Pulse ───────────────────────────────── */
+.available-btn span i.fas.fa-circle {
+  animation: availPulse 2s ease-in-out infinite;
+  color: #22c55e !important;
+}
+@keyframes availPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ── Page Load Fade In ───────────────────────────────────── */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+main {
+  animation: pageFadeIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Work Experience Slider Icons ────────────────────────── */
+.work-experiance-main .icon img {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.work-experiance-main li:hover .icon img {
+  transform: scale(1.12) rotate(-4deg);
+}
+
+/* ── Booking Section ─────────────────────────────────────── */
+.booking-section {
+  margin-top: 28px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(71, 112, 255, 0.15);
+  background: rgba(71, 112, 255, 0.03);
+}
+.booking-header {
+  padding: 20px 24px 12px;
+  border-bottom: 1px solid rgba(71, 112, 255, 0.08);
+}
+.booking-header h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.booking-header p {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.65;
+}
+.booking-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 24px 20px;
+}
+.slot-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(71,112,255,0.3);
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: inherit;
+}
+.slot-btn:hover, .slot-btn.selected {
+  background: #4770FF;
+  color: #fff;
+  border-color: #4770FF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(71,112,255,0.35);
+}
+.slot-confirm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #4770FF, #a855f7);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin: 0 24px 20px;
+}
+.slot-confirm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(71,112,255,0.4);
+}
+
+/* ── Form Success Animation ──────────────────────────────── */
+.form-success-overlay {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  animation: pageFadeIn 0.5s ease both;
+}
+.form-success-overlay.show {
+  display: flex;
+}
+.success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: successPop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes successPop {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+.success-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: white;
+  stroke-width: 3;
+  fill: none;
+}
+
+/* ── Cursor Glow ─────────────────────────────────────────── */
+#cursor-glow {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 112, 255, 0.08) 0%, transparent 70%);
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s linear;
+}
+
+/* ── Floating Animation for 3D shapes ───────────────────── */
+.threed-shape-1, .threed-shape-2 {
+  animation: floatShape 6s ease-in-out infinite;
+}
+.threed-shape-2 {
+  animation-delay: -3s;
+}
+@keyframes floatShape {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-18px) rotate(5deg); }
+}
+
+/* ── Scrolling Banner Text ───────────────────────────────── */
+.scrolling-info .slider-item {
+  animation: scrollText 18s linear infinite;
+}
+@keyframes scrollText {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── AI Skills Badge ─────────────────────────────────────── */
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(71,112,255,0.12), rgba(168,85,247,0.12));
+  border: 1px solid rgba(71,112,255,0.2);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #4770FF;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* ── Back to Top Button ──────────────────────────────────── */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #4770FF;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(71, 112, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#back-to-top:hover {
+  background: #365bd9;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 30px rgba(71, 112, 255, 0.6);
+}
+
+#back-to-top.show {
+  display: flex;
+}
+
+/* ── Portfolio Filter Buttons ────────────────────────────── */
+.portfolio-filter-nav .filter-btn {
+  background: rgba(71, 112, 255, 0.05);
+  border: 1px solid rgba(71, 112, 255, 0.1);
+  color: #4770FF;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-filter-nav .filter-btn:hover,
+.portfolio-filter-nav .filter-btn.active {
+  background: #4770FF;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(71, 112, 255, 0.3);
+}
+
+.portfolio-item-wrapper {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ════════════════════════════════════════════════════════════
+   DARK MODE — Full Polish for All New Elements
+   ════════════════════════════════════════════════════════════ */
+
+/* ── AI Badge ────────────────────────────────────────────── */
+.dark-theme .ai-badge {
+  background: linear-gradient(135deg, rgba(71,112,255,0.2), rgba(168,85,247,0.2));
+  border-color: rgba(71,112,255,0.35);
+  color: #7b9fff;
+}
+
+/* ── Hiring Strengths Section ────────────────────────────── */
+.hiring-strengths h4 {
+  color: #4770FF;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.hiring-list li {
+  color: var(--paragraph, #616670);
+  font-size: 0.88rem;
+  line-height: 2;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.hiring-list li b {
+  color: var(--black, #1A1F2C);
+}
+
+/* Dark Mode Overrides */
+.dark-theme .hiring-strengths h4 {
+  color: #7b9fff !important;
+}
+
+.dark-theme .hiring-list li {
+  color: rgba(240,242,245,0.75);
+  border-bottom-color: rgba(255,255,255,0.05);
+}
+
+.dark-theme .hiring-list li b {
+  color: #f0f2f5;
+}
+
+.dark-theme .hiring-strengths {
+  background: rgba(71,112,255,0.04);
+  border: 1px solid rgba(71,112,255,0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px !important;
+}
+
+.hiring-strengths {
+  background: rgba(71,112,255,0.02);
+  border: 1px solid rgba(71,112,255,0.08);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* ── Portfolio Filter Nav ────────────────────────────────── */
+.portfolio-filter-nav {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 20px !important;
+}
+
+.dark-theme .portfolio-filter-nav {
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+
+.dark-theme .portfolio-filter-nav .filter-btn {
+  background: rgba(71,112,255,0.08);
+  border-color: rgba(71,112,255,0.2);
+  color: #7b9fff;
+}
+
+.dark-theme .portfolio-filter-nav .filter-btn:hover,
+.dark-theme .portfolio-filter-nav .filter-btn.active {
+  background: #4770FF;
+  color: #fff;
+  border-color: #4770FF;
+  box-shadow: 0 5px 20px rgba(71,112,255,0.4);
+}
+
+/* ── Back to Top Button ──────────────────────────────────── */
+.dark-theme #back-to-top {
+  background: linear-gradient(135deg, #4770FF, #7c3aed);
+  box-shadow: 0 10px 30px rgba(71,112,255,0.5);
+}
+
+.dark-theme #back-to-top:hover {
+  background: linear-gradient(135deg, #365bd9, #6d28d9);
+  box-shadow: 0 15px 40px rgba(71,112,255,0.7);
+}
+
+/* ── Services Skill Tiles — Dark Mode ────────────────────── */
+.dark-theme .services-item {
+  background: rgba(14,16,24,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s ease;
+}
+
+.dark-theme .services-item:hover {
+  border-color: rgba(71,112,255,0.3);
+  background: rgba(71,112,255,0.08);
+  transform: translateY(-3px);
+}
+
+.dark-theme .services-item .image {
+  background: rgba(255,255,255,0.04);
+}
+
+.dark-theme .services-item .text .title {
+  color: #d0d7e8;
+}
+
+/* Light Mode hover for tiles */
+.services-item {
+  transition: all 0.3s ease;
+}
+
+.services-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(71,112,255,0.12);
+}
+
+/* ── Section Title — Dark Mode ───────────────────────────── */
+.dark-theme .main-common-title {
+  color: var(--dark-theme-white);
+}
+
+/* ── Profile Bio Text Readability ────────────────────────── */
+.dark-theme .profile-card .text p {
+  color: rgba(240,242,245,0.75);
+}
+
+.dark-theme .profile-card .text p strong {
+  color: #f0f2f5;
+}
+
+/* ── About Page Headline ─────────────────────────────────── */
+.dark-theme .main-title span {
+  color: #7b9fff;
+}
+
+/* ── Accordion Dark Mode ─────────────────────────────────── */
+.dark-theme .accordion-button:not(.collapsed) {
+  color: #7b9fff;
+  background-color: rgba(71,112,255,0.08);
+}
+
+/* ── Available Badge ─────────────────────────────────────── */
+.dark-theme .available-btn span {
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.3);
+  color: #34d399;
+}
+
+/* ── Feedback Cards — Dark Mode ──────────────────────────── */
+.dark-theme .feedback-item {
+  background: rgba(14,16,24,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+}
+
+.dark-theme .feedback-item .details p {
+  color: rgba(240,242,245,0.75);
+}
+
+.dark-theme .feedback-item .designation p {
+  color: rgba(240,242,245,0.6);
+}
+
+.dark-theme .feedback-item .designation p span {
+  color: #7b9fff;
+}
+
+/* ── Counter Numbers — Dark Mode ─────────────────────────── */
+.dark-theme .counter-item .number {
+  color: #7b9fff;
+}
+
+.dark-theme .counter-item .subtitle {
+  color: rgba(240,242,245,0.6);
+}
+
+/* ════════════════════════════════════════════════════════════
+   LIGHT MODE — Extra Polish
+   ════════════════════════════════════════════════════════════ */
+
+/* Smooth card hover in light mode */
+.card {
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(71,112,255,0.08) !important;
+}
+
+/* Better button spacing for Download CV / Book A Call side by side */
+.common-button-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.common-button-groups .btn {
+  margin-right: 0 !important;
+  flex: 1 1 auto;
+  min-width: 140px;
+  text-align: center;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Improved paragraph spacing in profile sidebar */
+.profile-card .text > p + p {
+  margin-top: 10px;
+}
+
+/* ── Print / Screen readability for hiring-list ──────────── */
+@media (max-width: 767px) {
+  .hiring-list li {
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+  .hiring-strengths h4 {
+    font-size: 0.9rem;
+  }
+  .portfolio-filter-nav .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+  .common-button-groups .btn {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}

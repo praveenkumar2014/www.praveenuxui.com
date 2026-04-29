@@ -1,0 +1,6 @@
+.DS_Store
+*.rar
+*.zip
+.vercel
+node_modules/
+scratch/
