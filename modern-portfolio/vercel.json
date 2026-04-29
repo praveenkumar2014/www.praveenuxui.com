@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {
+    "*.php": { "runtime": "vercel-php@0.7.1" },
+    "assets/*.php": { "runtime": "vercel-php@0.7.1" }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, immutable" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/index",             "destination": "/index.php" },
+    { "source": "/about",             "destination": "/about.php" },
+    { "source": "/services",          "destination": "/services.php" },
+    { "source": "/skills",            "destination": "/skills.php" },
+    { "source": "/portfolio",         "destination": "/portfolio.php" },
+    { "source": "/contact",           "destination": "/contact.php" },
+    { "source": "/blog",              "destination": "/blog.php" },
+    { "source": "/article",           "destination": "/article.php" },
+    { "source": "/gpay",              "destination": "/gpay.php" },
+    { "source": "/gmobile",           "destination": "/gmobile.php" },
+    { "source": "/gtresearch",        "destination": "/gtresearch.php" },
+    { "source": "/kd",                "destination": "/kd.php" },
+    { "source": "/portfolio-details", "destination": "/portfolio-details.php" },
+    { "source": "/thank-you",         "destination": "/thank-you.php" },
+    { "source": "/admin",             "destination": "/admin.php" },
+    { "source": "/login",             "destination": "/login.php" },
+    { "source": "/terms",             "destination": "/terms.php" },
+    { "source": "/privacy",           "destination": "/privacy.php" }
+  ]
+}
+
