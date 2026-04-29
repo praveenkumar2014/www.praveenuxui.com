@@ -59,6 +59,10 @@ foreach ($pages as $php => $html) {
 
     ob_start();
     try {
+        // Let included pages detect static build mode (avoid redirect exits).
+        if (!defined('STATIC_BUILD')) {
+            define('STATIC_BUILD', true);
+        }
         include $phpFile;
         $htmlContent = ob_get_clean();
     } catch (Throwable $e) {

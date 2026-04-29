@@ -1,6 +1,5 @@
 <?php
-session_start();
-session_destroy();
-header("Location: login.php");
-exit();
+// Legacy logout entrypoint: redirect to modern admin logout.
+header('Location: admin/logout');
+exit;
 ?>

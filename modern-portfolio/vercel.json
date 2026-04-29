@@ -39,8 +39,10 @@
     { "source": "/kd",                "destination": "/kd.php" },
     { "source": "/portfolio-details", "destination": "/portfolio-details.php" },
     { "source": "/thank-you",         "destination": "/thank-you.php" },
-    { "source": "/admin",             "destination": "/admin.php" },
-    { "source": "/login",             "destination": "/login.php" },
+    { "source": "/admin",             "destination": "/admin/index.php" },
+    { "source": "/admin/(.*)",        "destination": "/admin/$1.php" },
+    { "source": "/login",             "destination": "/admin/index.php" },
+    { "source": "/logout",            "destination": "/admin/logout.php" },
     { "source": "/terms",             "destination": "/terms.php" },
     { "source": "/privacy",           "destination": "/privacy.php" }
   ]
